@@ -3,3 +3,4 @@ name: mongo-app
 deployment:
   mongo_image: "mongo"
   mongo_tag: "latest"
+  
