@@ -1,6 +1,6 @@
 apiVersion: v2
-name: mongo-mongoex-app
-description: A Helm chart for Kubernetes
+name: config-map-service
+description: "A simple HELM test release"
 home: https://helm.sh/helm
 sources:
   - https://github.com/helm/helm
@@ -8,5 +8,5 @@ type: application
 maintainers:
   - email: fractiunate@gmail.com
     name: David Rahäuser
-version: "0.1.1"
-appVersion: "1.16.0"
+version: "0.1.0"
+appVersion: "1.0.0"
