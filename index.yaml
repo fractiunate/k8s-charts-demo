@@ -1,6 +1,39 @@
 apiVersion: v1
 entries:
+  config-map-service:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2021-12-10T15:09:13.991716327Z"
+    description: A simple HELM test release
+    digest: 898d40dfaae2c063e04d99536d763ba51bf7f74831c8e912aa2256fba0b1ef60
+    home: https://helm.sh/helm
+    maintainers:
+    - email: fractiunate@gmail.com
+      name: David Rahäuser
+    name: config-map-service
+    sources:
+    - https://github.com/helm/helm
+    type: application
+    urls:
+    - https://github.com/fractiunate/k8s-charts-demo/releases/download/config-map-service-0.1.0/config-map-service-0.1.0.tgz
+    version: 0.1.0
   mongo-mongoex-app:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2021-12-10T15:09:14.163915556Z"
+    description: A Helm chart for Kubernetes
+    digest: 4fc94bae27cda2fac7bee4d0c71439618012f4db6ecfcc45874fb9c385a3c1f2
+    home: https://helm.sh/helm
+    maintainers:
+    - email: fractiunate@gmail.com
+      name: David Rahäuser
+    name: mongo-mongoex-app
+    sources:
+    - https://github.com/helm/helm
+    type: application
+    urls:
+    - https://github.com/fractiunate/k8s-charts-demo/releases/download/mongo-mongoex-app-0.1.1/mongo-mongoex-app-0.1.1.tgz
+    version: 0.1.1
   - apiVersion: v2
     appVersion: 1.16.0
     created: "2021-12-06T10:30:16.616987838Z"
@@ -17,4 +50,4 @@ entries:
     urls:
     - https://github.com/fractiunate/k8s-charts-demo/releases/download/mongo-mongoex-app-0.1.0/mongo-mongoex-app-0.1.0.tgz
     version: 0.1.0
-generated: "2021-12-06T10:30:16.616992238Z"
+generated: "2021-12-10T15:09:14.163921256Z"
