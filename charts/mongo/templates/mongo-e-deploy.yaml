@@ -1,23 +1,25 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mongo-express
+  name: "{{ .Values.mongo_e_name }}-deployment"
   labels:
-    app: mongo-express
+    app: "{{ .Values.mongo_e_name }}"
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: mongo-express
+      app: "{{ .Values.mongo_e_name }}"
+      tier: backend
   template:
     metadata:
       labels:
-        app: mongo-express
+        app: "{{ .Values.mongo_e_name }}"
+        tier: backend
       annotations:
         checksum/config: {{ include (print $.Template.BasePath "/mongo-configmap.yaml") . | sha256sum }}
     spec:
       containers:
-      - name: mongo-express
+      - name: "{{ .Values.mongo_e_name }}"
         image: mongo-express
         ports:
         - containerPort: 8081
@@ -43,10 +45,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: mongo-express-service
+  name: "{{ .Values.mongo_e_name }}-service"
 spec:
   selector:
-    app: mongo-express
+    app: "{{ .Values.mongo_e_name }}"
   type: LoadBalancer
   ports:
     - protocol: TCP

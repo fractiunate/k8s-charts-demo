@@ -1,26 +1,26 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name:  "{{ .Values.name }}-deployment"
+  name:  "{{ .Values.mongo_name }}-deployment"
   labels:
-    app: "{{ .Values.name }}"
+    app: "{{ .Values.mongo_name }}"
     tier: backend
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: "{{ .Values.name }}"
+      app: "{{ .Values.mongo_name }}"
       tier: backend
   template:
     metadata:
       labels:
-        app: "{{ .Values.name }}"
+        app: "{{ .Values.mongo_name }}"
         tier: backend
       annotations:
         checksum/config: {{ include (print $.Template.BasePath "/mongo-configmap.yaml") . | sha256sum }}
     spec:
       containers:
-      - name: "{{ .Values.name }}"
+      - name: "{{ .Values.mongo_name }}"
         image: "{{ .Values.deployment.mongo_image }}:{{ .Values.deployment.mongo_tag }}"
         ports: 
         - containerPort: 27017
@@ -40,10 +40,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name:  "{{ .Values.name }}-service"
+  name:  "{{ .Values.mongo_name }}-service"
 spec:
   selector:
-    app: "{{ .Values.name }}"
+    app: "{{ .Values.mongo_name }}"
     tier: backend
   ports:
     - protocol: TCP

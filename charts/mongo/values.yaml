@@ -1,4 +1,5 @@
-name: mongo-app
+mongo_name: mongo-app
+mongo_e_name: mongo-express-app
 
 deployment:
   mongo_image: "mongo"

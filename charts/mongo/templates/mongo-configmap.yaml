@@ -1,6 +1,6 @@
 kind: ConfigMap
 apiVersion: v1
 metadata:
-  name: "{{ .Values.name }}-configmap"
+  name: "{{ .Values.mongo_name }}-configmap"
 data:
-  database_url: "{{ .Values.name }}-service"
+  database_url: "{{ .Values.mongo_name }}"
