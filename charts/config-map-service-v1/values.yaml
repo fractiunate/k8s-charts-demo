@@ -3,4 +3,3 @@ name: config-map-service
 deployment:
   mongo_image: "mongo"
   mongo_tag: "latest"
-  
