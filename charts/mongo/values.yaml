@@ -4,3 +4,5 @@ mongo_e_name: mongo-express-app
 deployment:
   mongo_image: "mongo"
   mongo_tag: "latest"
+  mongo_e_image: "mongo-express"
+  mongo_e_tag: "latest"
