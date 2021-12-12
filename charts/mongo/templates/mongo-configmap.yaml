@@ -3,4 +3,4 @@ apiVersion: v1
 metadata:
   name: "{{ .Values.mongo_name }}-configmap"
 data:
-  database_url: "{{ .Values.mongo_name }}"
+  database_url: "{{ .Values.mongo_name }}-service"
