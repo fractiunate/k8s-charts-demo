@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: "{{ .Values.mongo_e_name }}"
-        image: "{{ .Values.deployment.mongo_image }}:{{ .Values.deployment.mongo_tag }}"
+        image: "{{ .Values.deployment.mongo_e_image }}:{{ .Values.deployment.mongo_e_tag }}"
         ports:
         - containerPort: 8081
         env:

@@ -8,5 +8,5 @@ type: application
 maintainers:
   - email: fractiunate@gmail.com
     name: David Rahäuser
-version: "0.1.4"
+version: "0.1.5"
 appVersion: "1.16.0"
