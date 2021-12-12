@@ -20,6 +20,22 @@ entries:
   mongo-mongoex-app:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2021-12-12T20:28:06.560538348Z"
+    description: A Helm chart for Kubernetes
+    digest: 1173537cbe19d591b1e0787a4eeb6c2a25036ae6fff3231cfe03a3495efaf150
+    home: https://helm.sh/helm
+    maintainers:
+    - email: fractiunate@gmail.com
+      name: David Rahäuser
+    name: mongo-mongoex-app
+    sources:
+    - https://github.com/helm/helm
+    type: application
+    urls:
+    - https://github.com/fractiunate/k8s-charts-demo/releases/download/mongo-mongoex-app-0.1.6/mongo-mongoex-app-0.1.6.tgz
+    version: 0.1.6
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2021-12-12T19:07:34.69048719Z"
     description: A Helm chart for Kubernetes
     digest: ff42a7629ddea9902f439c1332d50a653a53f17ec15d63748677eedd2c2563d1
@@ -114,4 +130,4 @@ entries:
     urls:
     - https://github.com/fractiunate/k8s-charts-demo/releases/download/mongo-mongoex-app-0.1.0/mongo-mongoex-app-0.1.0.tgz
     version: 0.1.0
-generated: "2021-12-12T19:07:34.690777292Z"
+generated: "2021-12-12T20:28:06.56059255Z"
